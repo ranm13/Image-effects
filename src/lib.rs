@@ -26,7 +26,7 @@ pub fn convert(encoded_file: &str, convert_type: &str) -> String {
     log(&"Effect apllied".into());
 
     let mut buffer =vec![];
-    img .write_to(&mut buffer, Png).unwrap();
+    img.write_to(&mut buffer, Png).unwrap();
     log(&"new image written ".into());
 
     let encoded_image = general_purpose::STANDARD.encode(&buffer);
